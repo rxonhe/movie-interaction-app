@@ -3,12 +3,10 @@ package com.choinhet.movies.controller
 import com.choinhet.movies.model.Movie
 import com.choinhet.movies.service.MovieService
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin(origins = ["http://localhost:3000"])
 @RequestMapping("/api/v1/movies")
 class MovieController(private val movieService: MovieService) {
     @GetMapping
